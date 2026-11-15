@@ -194,7 +194,7 @@ export const HeroLightTheater: React.FC<HeroLightTheaterProps> = ({
             <div className="relative h-64 sm:h-72 rounded-xl overflow-hidden border-4 border-[#F7C502] bg-[#102a13] select-none">
               {/* Fotografía / Escena del Salón Iluminado */}
               <img
-                src="/src/assets/images/sala_con_cortinas_1794762217945.jpg"
+                src="./assets/images/sala_con_cortinas_1794762217945.jpg"
                 alt="Salón residencial en Pucallpa con control solar Kitasol"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
