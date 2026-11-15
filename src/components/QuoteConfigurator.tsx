@@ -46,6 +46,8 @@ export const QuoteConfigurator: React.FC<QuoteConfiguratorProps> = ({
     e.preventDefault();
     if (!summary.isValid) return;
     setSubmittedConfirmation(true);
+    // Abre directamente WhatsApp con la ficha preformateada
+    window.open(summary.whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   // Proporción visual para el plano de ventana en vivo
@@ -326,10 +328,12 @@ export const QuoteConfigurator: React.FC<QuoteConfiguratorProps> = ({
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <button
                 type="submit"
-                className="flex-1 inline-flex items-center justify-center gap-2 bg-[#F7C502] hover:bg-[#ffcf1a] text-[#00600F] font-display font-extrabold text-sm sm:text-base px-5 py-3.5 rounded-xl border-2 border-[#00600F] shadow-[0_4px_0_0_#00600F] active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
+                className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-[#052b0c] font-display font-extrabold text-sm sm:text-base px-5 py-3.5 rounded-xl border-2 border-[#00600F] shadow-[0_4px_0_0_#00600F] active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
               >
-                <ClipboardCheck className="w-5 h-5 stroke-[2.5]" aria-hidden="true" />
-                <span>Generar Ficha de Cotización</span>
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current shrink-0" aria-hidden="true">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.97 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8.01 12.27C8.14 12.44 9.76 14.94 12.25 16.01C14.34 16.92 14.76 16.74 15.21 16.7C15.66 16.66 16.68 16.09 16.89 15.51C17.1 14.93 17.1 14.43 17.04 14.33C16.97 14.24 16.81 14.18 16.56 14.06C16.31 13.94 15.09 13.34 14.87 13.26C14.64 13.17 14.48 13.13 14.31 13.38C14.15 13.63 13.67 14.18 13.53 14.35C13.38 14.52 13.24 14.54 12.99 14.42C12.74 14.29 11.94 14.03 10.99 13.19C10.25 12.53 9.75 11.71 9.61 11.46C9.46 11.21 9.59 11.08 9.72 10.95C9.83 10.84 9.97 10.66 10.1 10.51C10.22 10.37 10.27 10.26 10.35 10.1C10.43 9.93 10.39 9.79 10.33 9.66C10.27 9.54 9.77 8.32 9.56 7.82C9.36 7.34 9.16 7.4 9.01 7.39C8.86 7.38 8.7 7.33 8.53 7.33Z" />
+                </svg>
+                <span>Enviar Consulta a WhatsApp</span>
               </button>
 
               <button
@@ -427,24 +431,36 @@ export const QuoteConfigurator: React.FC<QuoteConfiguratorProps> = ({
                   role="status"
                   className="mt-4 p-3.5 rounded-xl bg-[#F7C502] text-[#00600F] border-2 border-white font-display font-extrabold text-xs sm:text-sm"
                 >
-                  ¡Tu ficha de medidas está lista! Llama ahora al {BRAND_INFO.phoneDisplay} para recibir atención directa del maestro especialista.
+                  ¡Tu ficha de cotización está lista! Se abrió WhatsApp para enviar tus datos directamente. Si no se abrió, pulsa el botón verde de abajo. También puedes llamarnos directamente al {BRAND_INFO.phoneDisplay}.
                 </div>
               )}
             </div>
 
-            {/* Acción Directa Telefónica + Nota de Validación de WhatsApp */}
+            {/* Acción Directa: WhatsApp (Principal) + Llamada (Secundaria) */}
             <div className="pt-4 border-t border-white/15 space-y-3">
               <a
-                href={BRAND_INFO.phoneHref}
-                className="w-full inline-flex items-center justify-center gap-2.5 bg-[#F7C502] hover:bg-[#ffcf1a] text-[#00600F] font-display font-extrabold text-sm sm:text-base px-6 py-4 rounded-xl border-2 border-[#00600F] shadow-[0_4px_0_0_#003307] active:translate-y-0.5 transition-all whitespace-nowrap"
+                href={summary.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-[#052b0c] font-display font-extrabold text-sm sm:text-base px-6 py-4 rounded-xl border-2 border-[#00600F] shadow-[0_4px_0_0_#003307] active:translate-y-0.5 transition-all whitespace-nowrap"
               >
-                <Phone className="w-5 h-5 stroke-[2.5]" aria-hidden="true" />
-                <span>Llamar y Consultar: {BRAND_INFO.phoneDisplay}</span>
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current shrink-0" aria-hidden="true">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.97 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8.01 12.27C8.14 12.44 9.76 14.94 12.25 16.01C14.34 16.92 14.76 16.74 15.21 16.7C15.66 16.66 16.68 16.09 16.89 15.51C17.1 14.93 17.1 14.43 17.04 14.33C16.97 14.24 16.81 14.18 16.56 14.06C16.31 13.94 15.09 13.34 14.87 13.26C14.64 13.17 14.48 13.13 14.31 13.38C14.15 13.63 13.67 14.18 13.53 14.35C13.38 14.52 13.24 14.54 12.99 14.42C12.74 14.29 11.94 14.03 10.99 13.19C10.25 12.53 9.75 11.71 9.61 11.46C9.46 11.21 9.59 11.08 9.72 10.95C9.83 10.84 9.97 10.66 10.1 10.51C10.22 10.37 10.27 10.26 10.35 10.1C10.43 9.93 10.39 9.79 10.33 9.66C10.27 9.54 9.77 8.32 9.56 7.82C9.36 7.34 9.16 7.4 9.01 7.39C8.86 7.38 8.7 7.33 8.53 7.33Z" />
+                </svg>
+                <span>Consultar por WhatsApp Directo</span>
+              </a>
+
+              <a
+                href={BRAND_INFO.phoneHref}
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#F7C502] hover:bg-[#ffcf1a] text-[#00600F] font-display font-bold text-xs sm:text-sm px-4 py-3 rounded-xl border-2 border-[#00600F] shadow-[0_3px_0_0_#003307] active:translate-y-0.5 transition-all whitespace-nowrap"
+              >
+                <Phone className="w-4 h-4 stroke-[2.5]" aria-hidden="true" />
+                <span>¿Prefieres llamar? Llamar al {BRAND_INFO.phoneDisplay}</span>
               </a>
 
               <div className="text-[11px] font-mono-tabular text-white/85 space-y-1">
-                <p>Nota sobre mensajería: {BRAND_INFO.whatsappValidationNote}</p>
-                <p>Política de precios: {BRAND_INFO.pricingPolicy}</p>
+                <p>Atención directa: {BRAND_INFO.whatsappValidationNote}</p>
+                <p>Condición: {BRAND_INFO.pricingPolicy}</p>
               </div>
             </div>
           </div>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="kitasolGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF078"/>
+      <stop offset="50%" stop-color="#F7C502"/>
+      <stop offset="100%" stop-color="#D4A000"/>
+    </linearGradient>
+    <linearGradient id="kitasolBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#006d12"/>
+      <stop offset="100%" stop-color="#00470b"/>
+    </linearGradient>
+  </defs>
+  <!-- Fondo redondeado verde esmeralda con borde dorado -->
+  <rect width="64" height="64" rx="14" fill="url(#kitasolBg)" stroke="#F7C502" stroke-width="2.5"/>
+  <!-- Letra A monumental con ventana de 4 paneles Kitasol -->
+  <g transform="translate(10, 8) scale(0.44)">
+    <path d="M36 4 L64 4 L98 98 L72 98 L65 78 L35 78 L28 98 L2 98 Z" fill="url(#kitasolGold)" stroke="#003d09" stroke-width="2"/>
+    <polygon points="50,22 39,52 61,52" fill="#FAF9F5"/>
+    <rect x="38.5" y="53.5" width="23" height="23" rx="2" fill="#FAF9F5"/>
+    <rect x="41" y="56" width="7.8" height="7.8" rx="1" fill="#00600F"/>
+    <rect x="51.2" y="56" width="7.8" height="7.8" rx="1" fill="#00600F"/>
+    <rect x="41" y="66.2" width="7.8" height="7.8" rx="1" fill="#00600F"/>
+    <rect x="51.2" y="66.2" width="7.8" height="7.8" rx="1" fill="#00600F"/>
+  </g>
+</svg>

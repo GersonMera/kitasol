@@ -119,173 +119,52 @@ export const UbicacionSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Plano / Mapa Arquitectónico Referencial de Jr. Teniente Clavero 134, Pucallpa (6 cols) */}
+          {/* Mapa Oficial en Google Maps (6 cols) */}
           <div className="lg:col-span-6 bg-[#00600F] text-white border-2 border-[#00600F] rounded-2xl p-6 sm:p-8 shadow-[0_8px_0_0_#F7C502] flex flex-col justify-between">
             <div className="flex items-center justify-between gap-3 mb-4">
               <div>
                 <span className="text-xs font-display font-extrabold uppercase tracking-[0.22em] text-[#F7C502]">
-                  CROQUIS ARQUITECTÓNICO DE REFERENCIA
+                  MAPA OFICIAL DE GOOGLE MAPS
                 </span>
                 <h3 className="font-display font-extrabold text-xl text-white">
-                  Centro Comercial “El Huequito” · Callería, Pucallpa
+                  CORTINAS EN PUCALLPA: KITASOL
                 </h3>
               </div>
               <Compass className="w-8 h-8 text-[#F7C502] shrink-0" aria-hidden="true" />
             </div>
 
-            {/* Mapa Vectorial Detallado del Centro de Pucallpa */}
-            <div className="relative flex-1 min-h-[260px] rounded-xl overflow-hidden border-2 border-[#F7C502] bg-[#003d09] p-4 flex flex-col justify-between">
-              <svg
-                viewBox="0 0 500 280"
-                className="w-full h-full object-cover"
-                role="img"
-                aria-label="Plano referencial de ubicación en Jr. Teniente Clavero 134, 2do piso de Decoraciones Buen Hogar, cerca del Centro Comercial El Huequito en Pucallpa"
-              >
-                {/* Cuadrícula urbana de Callería - Pucallpa */}
-                <rect width="500" height="280" fill="#003808" />
-                {[60, 140, 220, 300, 380, 440].map((x) => (
-                  <line
-                    key={`v-${x}`}
-                    x1={x}
-                    y1="0"
-                    x2={x}
-                    y2="280"
-                    stroke="#005e0f"
-                    strokeWidth="14"
-                  />
-                ))}
-                {[55, 135, 215].map((y) => (
-                  <line
-                    key={`h-${y}`}
-                    x1="0"
-                    y1={y}
-                    x2="500"
-                    y2={y}
-                    stroke="#005e0f"
-                    strokeWidth="16"
-                  />
-                ))}
-
-                {/* Vía Principal Destacada: Jr. Teniente Clavero */}
-                <line
-                  x1="0"
-                  y1="135"
-                  x2="500"
-                  y2="135"
-                  stroke="#F7C502"
-                  strokeWidth="22"
-                  opacity="0.9"
-                />
-                <text
-                  x="24"
-                  y="140"
-                  fill="#00600F"
-                  fontSize="12"
-                  fontWeight="800"
-                  letterSpacing="2"
-                >
-                  JR. TENIENTE CLAVERO (CUADRA 1)
-                </text>
-
-                {/* Bloque Referencia: Centro Comercial El Huequito */}
-                <rect
-                  x="235"
-                  y="68"
-                  width="130"
-                  height="48"
-                  rx="6"
-                  fill="#207000"
-                  stroke="#F7C502"
-                  strokeWidth="2"
-                />
-                <text
-                  x="300"
-                  y="90"
-                  textAnchor="middle"
-                  fill="#FFFFFF"
-                  fontSize="10"
-                  fontWeight="700"
-                >
-                  REF: C.C. EL HUEQUITO
-                </text>
-                <text
-                  x="300"
-                  y="105"
-                  textAnchor="middle"
-                  fill="#F7C502"
-                  fontSize="9"
-                  fontWeight="700"
-                >
-                  ZONA COMERCIAL PUCALLPA
-                </text>
-
-                {/* Marcador Principal: CORTINAS KITASOL N.º 134 (2do Piso) */}
-                <g transform="translate(260, 152)">
-                  <rect
-                    x="-85"
-                    y="0"
-                    width="210"
-                    height="64"
-                    rx="8"
-                    fill="#F7C502"
-                    stroke="#00600F"
-                    strokeWidth="3"
-                  />
-                  <text
-                    x="20"
-                    y="22"
-                    textAnchor="middle"
-                    fill="#00600F"
-                    fontSize="12"
-                    fontWeight="900"
-                  >
-                    ★ CORTINAS “KITASOL” ★
-                  </text>
-                  <text
-                    x="20"
-                    y="38"
-                    textAnchor="middle"
-                    fill="#00600F"
-                    fontSize="10"
-                    fontWeight="800"
-                  >
-                    Jr. Teniente Clavero N.º 134
-                  </text>
-                  <text
-                    x="20"
-                    y="53"
-                    textAnchor="middle"
-                    fill="#004d0c"
-                    fontSize="9.5"
-                    fontWeight="700"
-                  >
-                    2do Piso — Decoraciones “Buen Hogar”
-                  </text>
-                </g>
-
-                {/* Pin en la vía */}
-                <circle
-                  cx="280"
-                  cy="135"
-                  r="10"
-                  fill="#00600F"
-                  stroke="#FFFFFF"
-                  strokeWidth="3"
-                />
-              </svg>
-
-              <div className="mt-3 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 text-xs">
-                <span className="inline-flex items-center gap-1.5 font-semibold text-[#F7C502]">
-                  <Building2 className="w-4 h-4" aria-hidden="true" />
-                  <span>2do piso de Decoraciones “Buen Hogar”</span>
-                </span>
-                <span className="font-mono-tabular text-white/90">
-                  Callería · Pucallpa · Ucayali
-                </span>
-              </div>
+            {/* Iframe interactivo de Google Maps */}
+            <div className="relative flex-1 min-h-[320px] rounded-xl overflow-hidden border-2 border-[#F7C502] bg-[#003d09] shadow-inner">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.1595099946007!2d-74.533935!3d-8.3859671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a3bcf085999763%3A0xd51e1fc2b269ef58!2sCORTINAS%20EN%20PUCALLPA%3A%20KITASOL!5e0!3m2!1ses-419!2spe!4v1794764107965!5m2!1ses-419!2spe"
+                width="100%"
+                height="100%"
+                className="w-full h-full min-h-[320px] border-0"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Mapa oficial de ubicación de Cortinas KITASOL en Pucallpa"
+              />
             </div>
 
-            <p className="mt-4 text-xs text-white/85 leading-relaxed">
+            <div className="mt-4 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 text-xs">
+              <span className="inline-flex items-center gap-1.5 font-semibold text-[#F7C502]">
+                <Building2 className="w-4 h-4" aria-hidden="true" />
+                <span>Jr. Teniente Clavero N.º 134 (2do piso Decoraciones Buen Hogar)</span>
+              </span>
+              <a
+                href="https://maps.google.com/?cid=15356782352136798040"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-bold text-[#F7C502] hover:underline"
+              >
+                <span>Abrir en Google Maps</span>
+                <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+              </a>
+            </div>
+
+            <p className="mt-3 text-xs text-white/85 leading-relaxed">
               Atendemos pedidos para viviendas familiares, departamentos, oficinas corporativas, instituciones y comercios en toda la ciudad de Pucallpa.
             </p>
           </div>
@@ -372,6 +251,17 @@ export const PalatialFooter: React.FC = () => {
             <p>
               © 2026 {BRAND_INFO.name} — {BRAND_INFO.altName}. Pucallpa, Ucayali, Perú.
             </p>
+            <p>
+              Desarrollado por{' '}
+              <a
+                href="https://github.com/GersonMera"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#F7C502] hover:underline font-semibold transition-colors"
+              >
+                GersonMera
+              </a>
+            </p>
             <p className="font-mono-tabular">
               {BRAND_INFO.pricingPolicy}
             </p>
@@ -381,21 +271,33 @@ export const PalatialFooter: React.FC = () => {
 
       {/* Sticky Bottom Bar en Móvil (≤ 15% de alto de pantalla, sólo en móvil) */}
       <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[#00600F] border-t-4 border-[#F7C502] px-3 py-2 shadow-2xl">
-        <div className="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+        <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
+          <a
+            href={BRAND_INFO.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-1 bg-[#25D366] text-[#052b0c] font-display font-extrabold text-xs py-2.5 px-2 rounded-lg border-2 border-[#00600F] shadow-xs active:translate-y-0.5 transition-all whitespace-nowrap"
+          >
+            <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current shrink-0" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.97 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8.01 12.27C8.14 12.44 9.76 14.94 12.25 16.01C14.34 16.92 14.76 16.74 15.21 16.7C15.66 16.66 16.68 16.09 16.89 15.51C17.1 14.93 17.1 14.43 17.04 14.33C16.97 14.24 16.81 14.18 16.56 14.06C16.31 13.94 15.09 13.34 14.87 13.26C14.64 13.17 14.48 13.13 14.31 13.38C14.15 13.63 13.67 14.18 13.53 14.35C13.38 14.52 13.24 14.54 12.99 14.42C12.74 14.29 11.94 14.03 10.99 13.19C10.25 12.53 9.75 11.71 9.61 11.46C9.46 11.21 9.59 11.08 9.72 10.95C9.83 10.84 9.97 10.66 10.1 10.51C10.22 10.37 10.27 10.26 10.35 10.1C10.43 9.93 10.39 9.79 10.33 9.66C10.27 9.54 9.77 8.32 9.56 7.82C9.36 7.34 9.16 7.4 9.01 7.39C8.86 7.38 8.7 7.33 8.53 7.33Z" />
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+
           <a
             href="#cotizador"
-            className="inline-flex items-center justify-center gap-1.5 bg-white text-[#00600F] font-display font-extrabold text-xs py-2.5 px-3 rounded-lg border-2 border-[#00600F] whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-1 bg-white text-[#00600F] font-display font-extrabold text-xs py-2.5 px-2 rounded-lg border-2 border-[#00600F] shadow-xs active:translate-y-0.5 transition-all whitespace-nowrap"
           >
-            <Calculator className="w-4 h-4 stroke-[2.5]" aria-hidden="true" />
-            <span>Cotizar mi Ventana</span>
+            <Calculator className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+            <span>Cotizar</span>
           </a>
 
           <a
             href={BRAND_INFO.phoneHref}
-            className="inline-flex items-center justify-center gap-1.5 bg-[#F7C502] text-[#00600F] font-display font-extrabold text-xs py-2.5 px-3 rounded-lg border-2 border-[#00600F] whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-1 bg-[#F7C502] text-[#00600F] font-display font-extrabold text-xs py-2.5 px-2 rounded-lg border-2 border-[#00600F] shadow-xs active:translate-y-0.5 transition-all whitespace-nowrap"
           >
-            <Phone className="w-4 h-4 stroke-[2.5]" aria-hidden="true" />
-            <span>Llamar: {BRAND_INFO.phoneDisplay}</span>
+            <Phone className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+            <span>Llamar</span>
           </a>
         </div>
       </div>

@@ -66,6 +66,7 @@ export interface QuoteSummaryResult {
   ambienteName: string;
   productLabel: string;
   formattedMessage: string;
+  whatsappUrl: string;
   pricingDisclaimer: string;
 }
 
@@ -135,8 +136,10 @@ export function buildQuoteSummary(input: QuoteFormInput): QuoteSummaryResult {
     `• Medidas / Visita: ${dimensionsLine}`,
     `• ${clientLine}${notesLine}`,
     `--------------------------------------------`,
-    `Atención directa: ${BRAND_INFO.phoneDisplay} ${BRAND_INFO. pricingPolicy}`,
+    `Atención directa: ${BRAND_INFO.phoneDisplay} ${BRAND_INFO.pricingPolicy}`,
   ].join('\n');
+
+  const whatsappUrl = `https://wa.me/51981641263?text=${encodeURIComponent(formattedMessage)}`;
 
   return {
     isValid: errors.length === 0,
@@ -146,6 +149,7 @@ export function buildQuoteSummary(input: QuoteFormInput): QuoteSummaryResult {
     ambienteName,
     productLabel,
     formattedMessage,
+    whatsappUrl,
     pricingDisclaimer: BRAND_INFO.pricingPolicy,
   };
 }

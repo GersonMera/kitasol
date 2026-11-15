@@ -94,6 +94,7 @@ test('buildQuoteSummary valida medidas y genera ficha sin inventar precios', () 
   assert.ok(validQuote.formattedMessage.includes('981 641 263'));
   assert.ok(validQuote.formattedMessage.includes('[COTIZACIÓN SIN COMPROMISO SEGÚN MEDIDAS]'));
   assert.ok(!validQuote.formattedMessage.includes('S/'));
+  assert.ok(validQuote.whatsappUrl.startsWith('https://wa.me/51981641263?text='));
 
   const invalidQuote = buildQuoteSummary({
     ambienteId: 'sala',

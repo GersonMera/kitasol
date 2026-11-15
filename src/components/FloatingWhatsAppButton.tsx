@@ -16,7 +16,7 @@ export const FloatingWhatsAppButton: React.FC = () => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Consultar por WhatsApp al ${BRAND_INFO.phoneDisplay}`}
-      title={`WhatsApp Cortinas KITASOL: ${BRAND_INFO.phoneDisplay} ${BRAND_INFO.whatsappValidationNote}`}
+      title={`WhatsApp Cortinas KITASOL: ${BRAND_INFO.phoneDisplay}`}
       initial={
         prefersReducedMotion
           ? { opacity: 1, scale: 1, y: 0 }
@@ -47,7 +47,7 @@ export const FloatingWhatsAppButton: React.FC = () => {
       }}
       whileHover={prefersReducedMotion ? undefined : { scale: 1.06, y: -3 }}
       whileTap={prefersReducedMotion ? undefined : { scale: 0.95 }}
-      className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 group inline-flex items-center gap-2.5 bg-[#00600F] hover:bg-[#207000] text-white px-4 py-3.5 rounded-full border-2 border-[#F7C502] shadow-[0_6px_0_0_#003808,0_10px_24px_rgba(0,40,6,0.38)] focus-visible:outline-2 focus-visible:outline-[#F7C502] cursor-pointer select-none"
+      className="hidden md:inline-flex fixed md:bottom-6 md:right-6 z-50 group items-center gap-2.5 bg-[#00600F] hover:bg-[#207000] text-white px-4 py-3.5 rounded-full border-2 border-[#F7C502] shadow-[0_6px_0_0_#003808,0_10px_24px_rgba(0,40,6,0.38)] focus-visible:outline-2 focus-visible:outline-[#F7C502] cursor-pointer select-none"
     >
       {/* Icono vectorial oficial de WhatsApp */}
       <span className="w-7 h-7 rounded-full bg-[#F7C502] text-[#00600F] flex items-center justify-center shrink-0">
