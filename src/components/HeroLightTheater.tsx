@@ -108,7 +108,7 @@ export const HeroLightTheater: React.FC<HeroLightTheaterProps> = ({
               </h1>
 
               <p className="mt-4 text-base sm:text-lg text-[#133016] leading-relaxed max-w-2xl">
-                Vestimos las ventanas de su hogar, oficina o empresa en Pucallpa con{' '}
+                Cortinas para su hogar, oficina o empresa en Pucallpa con{' '}
                 <strong className="text-[#00600F]">
                   cortinas a medida, persianas verticales y horizontales, rollers modernos y rieles de alta durabilidad
                 </strong>
