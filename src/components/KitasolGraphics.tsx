@@ -78,17 +78,17 @@ export const KitasolMonumentalWordmark: React.FC<{
   }[size];
 
   const overtitleClasses = {
-    sm: 'text-sm sm:text-base tracking-[0.32em] mb-1 font-black',
-    md: 'text-lg sm:text-xl tracking-[0.35em] mb-1.5 font-black',
-    lg: 'text-2xl sm:text-3xl md:text-4xl tracking-[0.35em] mb-2.5 font-black',
-    hero: 'text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] tracking-[0.22em] sm:tracking-[0.28em] md:tracking-[0.32em] mb-3 sm:mb-4 font-black leading-tight',
+    sm: 'text-xs tracking-[0.25em] mb-1 font-black',
+    md: 'text-sm sm:text-base tracking-[0.28em] mb-1.5 font-black',
+    lg: 'text-base sm:text-xl tracking-[0.3em] mb-2 font-black',
+    hero: 'text-base sm:text-xl md:text-2xl lg:text-[1.85rem] tracking-[0.2em] sm:tracking-[0.25em] md:tracking-[0.28em] mb-2 sm:mb-3 font-black',
   }[size];
 
   return (
-    <div className="inline-flex flex-col items-center select-none">
+    <div className="inline-flex flex-col items-center select-none max-w-full">
       {showOvertitle && (
         <span
-          className={`font-display font-extrabold uppercase ${overtitleClasses} ${
+          className={`font-display font-black uppercase whitespace-nowrap ${overtitleClasses} ${
             onDark ? 'text-[#F7C502]' : 'text-[#00600F]'
           }`}
         >
