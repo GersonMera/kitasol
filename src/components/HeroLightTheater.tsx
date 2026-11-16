@@ -107,12 +107,8 @@ export const HeroLightTheater: React.FC<HeroLightTheaterProps> = ({
                 “{BRAND_INFO.slogan}”
               </h1>
 
-              <p className="mt-4 text-base sm:text-lg text-[#133016] leading-relaxed max-w-2xl">
-                Cortinas para su hogar, oficina o empresa en Pucallpa con{' '}
-                <strong className="text-[#00600F]">
-                  cortinas a medida, persianas verticales y horizontales, rollers modernos y rieles de alta durabilidad
-                </strong>
-                . Domine el sol intenso de Ucayali con elegancia palaciega, frescura térmica e intimidad total.
+              <p className="mt-3 text-sm sm:text-base text-[#133016] leading-relaxed max-w-xl">
+                <strong className="text-[#00600F]">Cortinas para su hogar</strong>, oficina o empresa en Pucallpa: cortinas con ojalillos, con rieles, persianas y rollers con máxima protección solar.
               </p>
             </div>
 
@@ -120,10 +116,10 @@ export const HeroLightTheater: React.FC<HeroLightTheaterProps> = ({
             <div className="my-6 py-4 px-4 bg-[#FAF9F5] border border-[#00600F]/20 rounded-xl">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
-                  { id: 'cortinas', label: 'CORTINAS' },
+                  { id: 'cortinas', label: 'CON OJALILLOS' },
+                  { id: 'rieles', label: 'CON RIELES' },
                   { id: 'persianas', label: 'PERSIANAS' },
                   { id: 'roller', label: 'ROLLER' },
-                  { id: 'rieles', label: 'RIELES Y ACC.' },
                 ].map((item) => (
                   <a
                     key={item.id}
