@@ -89,8 +89,8 @@ export const HeroLightTheater: React.FC<HeroLightTheaterProps> = ({
             </div>
 
             {/* Titular Monumental CORTINAS "KITASOL" con la ventana de 4 paneles en la "A" */}
-            <div className="my-2 text-center sm:text-left">
-              <div className="flex justify-center sm:justify-start">
+            <div className="my-2">
+              <div className="w-full flex justify-center">
                 <KitasolMonumentalWordmark
                   size="hero"
                   onDark={false}

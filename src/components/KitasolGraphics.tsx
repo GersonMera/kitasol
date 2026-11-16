@@ -81,7 +81,7 @@ export const KitasolMonumentalWordmark: React.FC<{
     sm: 'text-xs sm:text-sm mb-1 font-black',
     md: 'text-sm sm:text-base md:text-lg mb-1.5 font-black',
     lg: 'text-xl sm:text-2xl md:text-3xl mb-2 font-black',
-    hero: 'text-2xl sm:text-4xl md:text-5xl lg:text-[3.85rem] mb-2 sm:mb-3 font-black leading-none',
+    hero: 'text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem] mb-2 sm:mb-3 font-black leading-none',
   }[size];
 
   return (
@@ -91,7 +91,7 @@ export const KitasolMonumentalWordmark: React.FC<{
           className={`w-full block text-center font-display font-black uppercase whitespace-nowrap ${overtitleClasses} ${
             onDark ? 'text-[#F7C502]' : 'text-[#00600F]'
           }`}
-          style={{ letterSpacing: '0.24em', paddingLeft: '0.24em' }}
+          style={{ letterSpacing: '0.22em', paddingLeft: '0.22em' }}
         >
           CORTINAS
         </span>
