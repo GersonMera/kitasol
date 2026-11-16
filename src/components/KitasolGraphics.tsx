@@ -78,10 +78,10 @@ export const KitasolMonumentalWordmark: React.FC<{
   }[size];
 
   const overtitleClasses = {
-    sm: 'text-[10px] tracking-[0.35em] mb-0.5',
-    md: 'text-xs tracking-[0.42em] mb-1',
-    lg: 'text-sm sm:text-base tracking-[0.45em] mb-2',
-    hero: 'text-sm sm:text-lg md:text-xl tracking-[0.48em] mb-2',
+    sm: 'text-xs tracking-[0.35em] mb-1 font-extrabold',
+    md: 'text-sm sm:text-base tracking-[0.42em] mb-1.5 font-extrabold',
+    lg: 'text-base sm:text-xl md:text-2xl tracking-[0.45em] mb-2 font-black',
+    hero: 'text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-[0.38em] sm:tracking-[0.45em] mb-2.5 sm:mb-3.5 font-black',
   }[size];
 
   return (

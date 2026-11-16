@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
             aria-label="Cortinas KITASOL Pucallpa - Inicio"
             className="inline-flex items-baseline font-display font-extrabold text-xl sm:text-2xl tracking-tight whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-[#00600F]"
           >
-            <span className="hidden sm:inline text-[#00600F] mr-1.5 text-xs sm:text-sm tracking-[0.28em] font-bold">
+            <span className="hidden sm:inline text-[#00600F] mr-2 text-sm sm:text-base tracking-[0.28em] font-black">
               CORTINAS
             </span>
             <span className="text-[#00600F]">“KIT</span>

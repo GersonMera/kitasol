@@ -1,6 +1,6 @@
 # CORTINAS "KITASOL" — Pucallpa
 
-> *"Hagamos de su casa un palacio"*
+> *"Asesoría y diseño profesional, las empresas más importantes de la región así lo confirman"*
 
 Sitio web y plataforma interactiva oficial de **CORTINAS "KITASOL"**, la mejor tienda y taller especializado de cortinas, persianas y rollers en Pucallpa, Ucayali, Perú.
 

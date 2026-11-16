@@ -7,7 +7,7 @@
 export const BRAND_INFO = {
   name: 'CORTINAS "KITASOL"',
   altName: 'Cortinas en Pucallpa Kitasol',
-  slogan: 'Hagamos de su casa un palacio',
+  slogan: 'Asesoría y diseño profesional, las empresas más importantes de la región así lo confirman',
   commercialClaim: 'La mejor tienda de cortinas en Pucallpa',
   specialistRole: 'Maestro especialista en cortinas',
   promises: [
@@ -63,7 +63,7 @@ export const TECHNICAL_BENEFITS = [
   {
     id: 'elegancia',
     title: 'Elegancia',
-    shortDesc: 'Función decorativa monumental: "Hagamos de su casa un palacio".',
+    shortDesc: 'Función decorativa monumental con asesoría y diseño profesional.',
     detail:
       'Caídas plisadas de piso a techo, cenefas clásicas o líneas minimalistas en roller que visten cada ventana como una pieza arquitectónica.',
     metricLabel: 'Realce Palaciego',
@@ -304,7 +304,8 @@ export const SERVICIOS = [
 ];
 
 export const MARQUEE_ITEMS = [
-  'HAGAMOS DE SU CASA UN PALACIO',
+  'ASESORÍA Y DISEÑO PROFESIONAL',
+  'LAS EMPRESAS MÁS IMPORTANTES DE LA REGIÓN ASÍ LO CONFIRMAN',
   'CORTINAS',
   'PERSIANAS VERTICALES Y HORIZONTALES',
   'ROLLER',

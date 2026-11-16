@@ -99,9 +99,9 @@ export const HeroLightTheater: React.FC<HeroLightTheaterProps> = ({
                 />
               </div>
 
-              {/* Slogan oficial palaciego */}
+              {/* Slogan oficial */}
               <h1
-                className="mt-4 font-display font-extrabold text-2xl sm:text-4xl lg:text-[2.65rem] text-[#00600F] leading-[1.12] tracking-tight"
+                className="mt-4 font-display font-extrabold text-xl sm:text-3xl lg:text-[2.35rem] text-[#00600F] leading-[1.18] tracking-tight"
                 style={{ textWrap: 'balance' }}
               >
                 “{BRAND_INFO.slogan}”
