@@ -78,26 +78,29 @@ export const KitasolMonumentalWordmark: React.FC<{
   }[size];
 
   const overtitleClasses = {
-    sm: 'text-sm tracking-[0.18em] mb-1 font-black',
-    md: 'text-base sm:text-lg tracking-[0.2em] mb-1.5 font-black',
-    lg: 'text-xl sm:text-2xl md:text-3xl tracking-[0.22em] mb-2 font-black',
-    hero: 'text-xl sm:text-3xl md:text-4xl lg:text-[2.85rem] tracking-[0.12em] sm:tracking-[0.16em] md:tracking-[0.2em] mb-2 sm:mb-3 font-black leading-none',
+    sm: 'text-xs sm:text-sm mb-1 font-black',
+    md: 'text-sm sm:text-base md:text-lg mb-1.5 font-black',
+    lg: 'text-xl sm:text-2xl md:text-3xl mb-2 font-black',
+    hero: 'text-2xl sm:text-3xl md:text-4xl lg:text-[3.25rem] mb-2 sm:mb-3 font-black leading-none',
   }[size];
 
   return (
     <div className="inline-flex flex-col items-center select-none max-w-full">
       {showOvertitle && (
-        <span
-          className={`font-display font-black uppercase whitespace-nowrap ${overtitleClasses} ${
-            onDark ? 'text-[#F7C502]' : 'text-[#00600F]'
-          }`}
-        >
-          C O R T I N A S
-        </span>
+        <div className="w-full flex justify-center items-center">
+          <span
+            className={`font-display font-black uppercase whitespace-nowrap text-center ${overtitleClasses} ${
+              onDark ? 'text-[#F7C502]' : 'text-[#00600F]'
+            }`}
+            style={{ letterSpacing: '0.3em', marginRight: '-0.3em' }}
+          >
+            CORTINAS
+          </span>
+        </div>
       )}
 
       <div
-        className={`font-display font-extrabold uppercase leading-none tracking-tight flex items-start ${sizeClasses}`}
+        className={`font-display font-extrabold uppercase leading-none tracking-tight flex items-start justify-center ${sizeClasses}`}
       >
         <span
           className="font-serif font-black text-[0.72em] leading-none -mt-[0.06em] mr-0.5"
